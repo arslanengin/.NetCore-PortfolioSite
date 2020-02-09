@@ -1,0 +1,87 @@
+﻿@model List<Portfolio.DomainClasses.Work>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="wil-content">
+
+    <!-- Section -->
+    <section class="awe-section">
+        <div class="container">
+
+            <!-- page-title -->
+            <div class="page-title">
+                <h2 class="page-title__title">
+                    Selamun Aleyküm Reisler<br>I
+
+                    <!-- typing__module -->
+                    <div class="typing__module">
+                        <div class="typed-strings">
+                            <span>Burası Span 1 'den</span><span> do creative</span><span>Burası muştur</span>
+                        </div><span class="typed"></span>
+                    </div><!-- End / typing__module -->
+
+                </h2>
+                <p class="page-title__text"></p>
+                <div class="page-title__divider"></div>
+            </div><!-- End / page-title -->
+
+        </div>
+    </section>
+    <!-- End / Section -->
+    <!-- Section -->
+    <div class="row">
+        <div class="col-md-12">
+
+            <div id="mdb-lightbox-ui"></div>
+
+            <div class="mdb-lightbox">
+
+               
+                    @Html.Partial("PartialWorks", Model)
+
+               
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- End / Section -->
+
+</div>
+
+
+
+    @*<script>
+
+           // MDB Lightbox Init
+        
+        var pageNo = 1;
+        $(window).scroll(function () {
+         
+            if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+                
+                $.ajax({
+                    url: '/Home/Index',
+                    data: { page: pageNo },
+                    complete: function (data) {
+                
+                        $(".deneme").append(data.responseText);
+                        pageNo++;
+                    }
+                });
+
+            }
+        });
+
+          $(function () {
+            $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+        });
+     
+
+    </script>*@
+
+
+

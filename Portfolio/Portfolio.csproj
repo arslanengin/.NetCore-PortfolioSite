@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Template\minimus-master\.gitattributes" />
+    <Content Include="Template\minimus-master\.gitignore" />
+    <Content Include="Template\minimus-master\about.html" />
+    <Content Include="Template\minimus-master\blog-detail.html" />
+    <Content Include="Template\minimus-master\blog.html" />
+    <Content Include="Template\minimus-master\contact.html" />
+    <Content Include="Template\minimus-master\index.html" />
+    <Content Include="Template\minimus-master\work-detail.html" />
+    <Content Include="Template\minimus-master\work.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\main.css" />
+    <None Include="wwwroot\fonts\fontawesome\font-awesome.min.css" />
+    <None Include="wwwroot\fonts\fontawesome\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\fontawesome\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\fonts\pe-icon\fonts\Pe-icon-7-stroke.eot" />
+    <None Include="wwwroot\fonts\pe-icon\fonts\Pe-icon-7-stroke.svg" />
+    <None Include="wwwroot\fonts\pe-icon\fonts\Pe-icon-7-stroke.ttf" />
+    <None Include="wwwroot\fonts\pe-icon\fonts\Pe-icon-7-stroke.woff" />
+    <None Include="wwwroot\fonts\pe-icon\pe-icon.css" />
+    <None Include="wwwroot\img\logo.png" />
+    <None Include="wwwroot\img\works\01.jpg" />
+    <None Include="wwwroot\img\works\02.jpg" />
+    <None Include="wwwroot\img\works\03.jpg" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\vendors\bootstrap\grid.css" />
+    <None Include="wwwroot\vendors\imagesloaded\imagesloaded.pkgd.js" />
+    <None Include="wwwroot\vendors\isotope-layout\isotope.pkgd.js" />
+    <None Include="wwwroot\vendors\jquery-one-page\jquery.nav.min.js" />
+    <None Include="wwwroot\vendors\jquery.easing\jquery.easing.min.js" />
+    <None Include="wwwroot\vendors\jquery.matchHeight\jquery.matchHeight.min.js" />
+    <None Include="wwwroot\vendors\jquery.waypoints\jquery.waypoints.min.js" />
+    <None Include="wwwroot\vendors\jquery\jquery.min.js" />
+    <None Include="wwwroot\vendors\magnific-popup\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\vendors\magnific-popup\magnific-popup.min.css" />
+    <None Include="wwwroot\vendors\masonry-layout\masonry.pkgd.js" />
+    <None Include="wwwroot\vendors\menu\menu.js" />
+    <None Include="wwwroot\vendors\swiper\swiper.css" />
+    <None Include="wwwroot\vendors\swiper\swiper.jquery.js" />
+    <None Include="wwwroot\vendors\typed\typed.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Template\minimus-master\assets\" />
+    <Folder Include="Views\Contact\" />
+  </ItemGroup>
+
+</Project>
