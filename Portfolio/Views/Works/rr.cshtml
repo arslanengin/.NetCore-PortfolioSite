@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewData["Title"] = "rr";
+}
+
+<h1>rr</h1>
+
+<section class="awe-section bg-gray">
+    <div id="myBtnContainer">
+
+        <button class="btn active md-btn md-btn--outline-primary awe-text-center mt-50" onclick="filterSelection('all')"> Tümü </button>
+        <button class="btn md-btn md-btn--outline-primary awe-text-center mt-50" onclick="filterSelection('a')"> Logo</button>
+        <button class="btn md-btn md-btn--outline-primary awe-text-center mt-50" onclick="filterSelection('2')"> Web Tasarım</button>
+        <button class="btn md-btn md-btn--outline-primary awe-text-center mt-50" onclick="filterSelection('3')"> Ambalaj Tasarımı</button>
+        <button class="btn md-btn md-btn--outline-primary awe-text-center mt-50" onclick="filterSelection('4')"> Kurumsal Kimlik</button>
+        <button class="btn md-btn md-btn--outline-primary awe-text-center mt-50" onclick="filterSelection('5')"> Sosyal Medya Tasarımı</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 ">
+
+                <!-- title -->
+                <div class="title">
+                    <h2 class="title__title">My work</h2>
+                </div><!-- End / title -->
+
+            </div>
+        </div>
+        <div class="grid-css grid-css--masonry" data-col-lg="3" data-col-md="2" data-col-sm="2" data-col-xs="1" data-gap="30">
+            <div class="grid__inner">
+                <div class="grid-sizer"></div>
+                @{
+                    int i = 1;
+                    foreach (var item in Model)
+                    {
+                        if (i % 3 == 0)
+                        {
+                            <div class="column @item.CategoryID ">
+                                <div class="grid-item">
+                                    <div class="grid-item__inner">
+                                        <div class="grid-item__content-wrapper">
+
+                                            <!-- work -->
+
+                                            <div class="work">
+                                                <a href="works/detail/@item.WorkID">
+
+                                                    <!-- hoverbox ef-slide-bottom -->
+                                                    <div class="hoverbox ef-slide-bottom light">
+
+                                                        <!-- hb_front -->
+                                                        <div class="hb_front">
+                                                            <img src="~/img/works/@item.MainPhoto" alt="@item.CategoryID" />
+                                                        </div><!-- End / hb_front -->
+                                                        <!-- hb_back -->
+                                                        <div class="hb_back">
+                                                            <h2 class="work__title">@item.WorkDescription </h2><span class="work__text">View detail</span>
+                                                        </div><!-- End / hb_back -->
+
+                                                    </div><!-- End / hoverbox ef-slide-bottom -->
+                                                </a>
+                                            </div><!-- End / work -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            i++;
+                        }
+                        else if (i % 3 == 1)
+                        {
+                            <div class="column @item.CategoryID">
+                                <div class="grid-item" style="position: absolute; left: 389px; top: 0px; width: 389px;">
+                                    <div class="grid-item__inner">
+                                        <div class="grid-item__content-wrapper">
+
+                                            <!-- work -->
+
+                                            <div class="work">
+                                                <a href="works/detail/@item.WorkID">
+
+                                                    <!-- hoverbox ef-move-top -->
+                                                    <div class="hoverbox ef-move-top light">
+
+                                                        <!-- hb_front -->
+                                                        <div class="hb_front">
+                                                            <img src="~/img/works/@item.MainPhoto" alt="@item.CategoryID">
+                                                        </div><!-- End / hb_front -->
+                                                        <!-- hb_back -->
+                                                        <div class="hb_back">
+                                                            <h2 class="work__title">@item.WorkDescription</h2><span class="work__text">View detail</span>
+                                                        </div><!-- End / hb_back -->
+
+                                                    </div><!-- End / hoverbox ef-move-top -->
+                                                </a>
+                                            </div><!-- End / work -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            i++;
+                        }
+                        else
+                        {
+                            <div class="column @item.CategoryID">
+                                <div class="grid-item" style="position: absolute; left: 779px; top: 0px; width: 389px;">
+                                    <div class="grid-item__inner">
+                                        <div class="grid-item__content-wrapper">
+
+                                            <!-- work -->
+
+                                            <div class="work">
+                                                <a href="works/detail/@item.WorkID">
+
+                                                    <!-- hoverbox ef-slide-right -->
+                                                    <div class="hoverbox ef-slide-right light">
+
+                                                        <!-- hb_front -->
+                                                        <div class="hb_front">
+                                                            <img src="~/img/works/@item.MainPhoto" alt="@item.CategoryID">
+                                                        </div><!-- End / hb_front -->
+                                                        <!-- hb_back -->
+                                                        <div class="hb_back">
+                                                            <h2 class="work__title">@item.WorkDescription</h2><span class="work__text">View detail</span>
+                                                        </div><!-- End / hb_back -->
+
+                                                    </div><!-- End / hoverbox ef-slide-right -->
+                                                </a>
+                                            </div><!-- End / work -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            i++;
+                        }
+
+
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+</section>
